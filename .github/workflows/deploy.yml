@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no root@leandrosouza.dev.br 'cd /var/www/clients/client0/web1/web && git pull origin main'
+        ssh -o StrictHostKeyChecking=no root@srv520340.hstgr.cloud 'cd /var/www/clients/client0/web1/web && git pull origin main'
