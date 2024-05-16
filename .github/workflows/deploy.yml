@@ -18,6 +18,5 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Deploy to Server
-      run: |
-        ssh -o StrictHostKeyChecking=no root@93.127.210.249 'cd /var/www/clients/client0/web1/web && git pull origin main'
+    - name: Reset local changes
+      run: ssh -o StrictHostKeyChecking=no root@93.127.210.249 'cd /var/www/clients/client0/web1/web && git fetch --all && git reset --hard origin/main'
